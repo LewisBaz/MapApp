@@ -14,6 +14,9 @@
 		F4569F5C281FF5B100CEBA93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4569F5A281FF5B100CEBA93 /* Main.storyboard */; };
 		F4569F5E281FF5B100CEBA93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4569F5D281FF5B100CEBA93 /* Assets.xcassets */; };
 		F4569F61281FF5B100CEBA93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4569F5F281FF5B100CEBA93 /* LaunchScreen.storyboard */; };
+		F4569F6D28202AB800CEBA93 /* RealmRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4569F6C28202AB800CEBA93 /* RealmRoute.swift */; };
+		F4569F7028202C0C00CEBA93 /* RoutesDatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4569F6F28202C0C00CEBA93 /* RoutesDatabaseService.swift */; };
+		F4569F742820599800CEBA93 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4569F732820599800CEBA93 /* UIViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		F4569F5D281FF5B100CEBA93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4569F60281FF5B100CEBA93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4569F62281FF5B100CEBA93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4569F6C28202AB800CEBA93 /* RealmRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRoute.swift; sourceTree = "<group>"; };
+		F4569F6F28202C0C00CEBA93 /* RoutesDatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesDatabaseService.swift; sourceTree = "<group>"; };
+		F4569F732820599800CEBA93 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +87,10 @@
 			isa = PBXGroup;
 			children = (
 				F4569F68281FF5F200CEBA93 /* AppMain */,
+				F4569F722820598500CEBA93 /* Extensions */,
+				F4569F6B28202AA200CEBA93 /* Models */,
 				F4569F69281FF5FB00CEBA93 /* Resources */,
+				F4569F6E28202BEF00CEBA93 /* Services */,
 				F4569F6A281FF63500CEBA93 /* Screens */,
 			);
 			path = MapApp;
@@ -115,6 +124,30 @@
 			path = Screens;
 			sourceTree = "<group>";
 		};
+		F4569F6B28202AA200CEBA93 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F4569F6C28202AB800CEBA93 /* RealmRoute.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F4569F6E28202BEF00CEBA93 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F4569F6F28202C0C00CEBA93 /* RoutesDatabaseService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F4569F722820598500CEBA93 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F4569F732820599800CEBA93 /* UIViewController.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -127,6 +160,7 @@
 				F4569F4E281FF5B100CEBA93 /* Frameworks */,
 				F4569F4F281FF5B100CEBA93 /* Resources */,
 				747564C9ED9B0E42DC2CB066 /* [CP] Copy Pods Resources */,
+				B8EAE60FE51A7DAD6857538D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -201,6 +235,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MapApp/Pods-MapApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B8EAE60FE51A7DAD6857538D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MapApp/Pods-MapApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MapApp/Pods-MapApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MapApp/Pods-MapApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		DF06B72C0DA982F09A14EA6E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -231,8 +282,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4569F59281FF5B100CEBA93 /* MapViewController.swift in Sources */,
+				F4569F7028202C0C00CEBA93 /* RoutesDatabaseService.swift in Sources */,
 				F4569F55281FF5B100CEBA93 /* AppDelegate.swift in Sources */,
 				F4569F57281FF5B100CEBA93 /* SceneDelegate.swift in Sources */,
+				F4569F742820599800CEBA93 /* UIViewController.swift in Sources */,
+				F4569F6D28202AB800CEBA93 /* RealmRoute.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,10 +435,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GBDSAYFJ49;
-				EXCLUDED_ARCHS = arm64;
+				EXCLUDED_ARCHS = "";
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MapApp/Resources/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Need location to show your current position";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Need location to show your current position";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Need location to show your current position";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -412,10 +469,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GBDSAYFJ49;
-				EXCLUDED_ARCHS = arm64;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MapApp/Resources/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Need location to show your current position";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Need location to show your current position";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Need location to show your current position";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

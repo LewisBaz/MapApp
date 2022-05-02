@@ -31,11 +31,23 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="P6R-re-HBv">
-                        <barButtonItem key="rightBarButtonItem" title="To Moscow" id="u0Q-PH-o00">
+                        <barButtonItem key="leftBarButtonItem" title="Start Route" id="h3u-zo-r4H">
                             <connections>
-                                <action selector="toCityAction:" destination="BYZ-38-t0r" id="Nbe-UX-Btz"/>
+                                <action selector="startRouteAction:" destination="BYZ-38-t0r" id="Sso-Kw-MBd"/>
                             </connections>
                         </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Stop Route" id="u0Q-PH-o00">
+                                <connections>
+                                    <action selector="stopRouteAction:" destination="BYZ-38-t0r" id="OL5-me-kcd"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Last Route" id="HEC-AA-xmr">
+                                <connections>
+                                    <action selector="showLastRoute:" destination="BYZ-38-t0r" id="qNC-67-43J"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="7Ho-DX-YRZ" id="7Dr-ad-mdS"/>
