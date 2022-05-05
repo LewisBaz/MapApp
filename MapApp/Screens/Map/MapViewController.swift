@@ -13,6 +13,7 @@ import RealmSwift
 class MapViewController: UIViewController {
 
     @IBOutlet weak var mapView: GMSMapView!
+    @IBOutlet weak var router: MapRouter!
     
     var locationManager: CLLocationManager?
     private let geocoder = CLGeocoder()
@@ -53,6 +54,10 @@ class MapViewController: UIViewController {
     private func addMarker(coordinate: CLLocationCoordinate2D) {
         let marker = GMSMarker(position: coordinate)
         marker.map = mapView
+    }
+    
+    @IBAction func backButtonTapped(_ sender: Any) {
+        router.toMain()
     }
     
     @IBAction func startRouteAction(_ sender: Any) {

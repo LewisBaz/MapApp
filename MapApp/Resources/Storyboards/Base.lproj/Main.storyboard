@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MapViewController" id="BYZ-38-t0r" customClass="MapViewController" customModule="MapApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Ho-DX-YRZ" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7Ho-DX-YRZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="7Xh-6B-lZR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7Ho-DX-YRZ" secondAttribute="trailing" id="QkH-3T-HRl"/>
+                            <constraint firstItem="7Ho-DX-YRZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ry8-lp-d1i"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7Ho-DX-YRZ" secondAttribute="bottom" id="kcY-mN-Kwe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="P6R-re-HBv">
+                        <barButtonItem key="leftBarButtonItem" image="arrow.left" catalog="system" id="YjP-do-6El">
+                            <connections>
+                                <action selector="backButtonTapped:" destination="BYZ-38-t0r" id="Ugq-tr-moC"/>
+                            </connections>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Start Route" id="h3u-zo-r4H">
+                                <connections>
+                                    <action selector="startRouteAction:" destination="BYZ-38-t0r" id="Sso-Kw-MBd"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Stop Route" id="u0Q-PH-o00">
+                                <connections>
+                                    <action selector="stopRouteAction:" destination="BYZ-38-t0r" id="OL5-me-kcd"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Last Route" id="HEC-AA-xmr">
+                                <connections>
+                                    <action selector="showLastRoute:" destination="BYZ-38-t0r" id="qNC-67-43J"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="7Ho-DX-YRZ" id="7Dr-ad-mdS"/>
+                        <outlet property="router" destination="hLt-C7-9XJ" id="YLJ-aG-YIF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="hLt-C7-9XJ" customClass="MapRouter" customModule="MapApp" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="470" y="98"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="rBe-tO-9Pw">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" id="qKx-3k-D5w" customClass="MainViewController" customModule="MapApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5tk-Mb-pPn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B9O-zs-zIQ">
+                                <rect key="frame" x="170.5" y="761" width="73" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Log out"/>
+                                <connections>
+                                    <action selector="onLogOutTapped:" destination="qKx-3k-D5w" eventType="touchUpInside" id="mc7-au-IPs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="neU-Ue-oNN">
+                                <rect key="frame" x="161.5" y="690" width="91" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Go to map"/>
+                                <connections>
+                                    <action selector="goToMapTapped:" destination="qKx-3k-D5w" eventType="touchUpInside" id="97K-NU-4eu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eZc-Cy-PMF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eZc-Cy-PMF" firstAttribute="bottom" secondItem="B9O-zs-zIQ" secondAttribute="bottom" constant="70" id="2vc-2l-WJ1"/>
+                            <constraint firstItem="B9O-zs-zIQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="eZc-Cy-PMF" secondAttribute="leading" id="Ehs-TW-SlH"/>
+                            <constraint firstItem="neU-Ue-oNN" firstAttribute="centerX" secondItem="5tk-Mb-pPn" secondAttribute="centerX" id="HEi-EN-Uha"/>
+                            <constraint firstItem="B9O-zs-zIQ" firstAttribute="top" secondItem="neU-Ue-oNN" secondAttribute="bottom" constant="40" id="Opi-cO-vsZ"/>
+                            <constraint firstItem="B9O-zs-zIQ" firstAttribute="centerX" secondItem="5tk-Mb-pPn" secondAttribute="centerX" id="Q6v-FK-dyL"/>
+                            <constraint firstItem="eZc-Cy-PMF" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="B9O-zs-zIQ" secondAttribute="trailing" id="typ-Wv-aRM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="router" destination="aLB-ET-Esy" id="0jN-gm-caJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vp2-84-VPb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="aLB-ET-Esy" customClass="MainRouter" customModule="MapApp" customModuleProvider="target">
+                    <connections>
+                        <outlet property="controller" destination="qKx-3k-D5w" id="WNM-Ai-O61"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="-439" y="98"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.left" catalog="system" width="128" height="98"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
