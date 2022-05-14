@@ -29,6 +29,7 @@
 		F4569F92282334AA00CEBA93 /* UserLoginDatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4569F91282334AA00CEBA93 /* UserLoginDatabaseService.swift */; };
 		F4569F952823355D00CEBA93 /* BaseRealmDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4569F942823355D00CEBA93 /* BaseRealmDatabase.swift */; };
 		F4569F972823DCB400CEBA93 /* MapRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4569F962823DCB400CEBA93 /* MapRouter.swift */; };
+		F4569F99282F304900CEBA93 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4569F98282F304900CEBA93 /* UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		F4569F91282334AA00CEBA93 /* UserLoginDatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginDatabaseService.swift; sourceTree = "<group>"; };
 		F4569F942823355D00CEBA93 /* BaseRealmDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRealmDatabase.swift; sourceTree = "<group>"; };
 		F4569F962823DCB400CEBA93 /* MapRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRouter.swift; sourceTree = "<group>"; };
+		F4569F98282F304900CEBA93 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				F4569F732820599800CEBA93 /* UIViewController.swift */,
+				F4569F98282F304900CEBA93 /* UIView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				F4569F742820599800CEBA93 /* UIViewController.swift in Sources */,
 				F4569F862822938E00CEBA93 /* BaseRouter.swift in Sources */,
 				F4569F6D28202AB800CEBA93 /* RealmRoute.swift in Sources */,
+				F4569F99282F304900CEBA93 /* UIView.swift in Sources */,
 				F4569F7728228CAF00CEBA93 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
