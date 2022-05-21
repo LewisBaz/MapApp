@@ -79,6 +79,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="loginButton" destination="LMg-5T-6WO" id="xnV-pC-b6s"/>
                         <outlet property="loginTextField" destination="tTZ-Nr-LuM" id="YtK-xi-c6C"/>
                         <outlet property="passwordTextField" destination="lpQ-9w-NYB" id="9gi-Fu-SJA"/>
                         <outlet property="router" destination="2YM-RJ-V9I" id="LIg-eK-Jt9"/>
@@ -155,6 +156,7 @@
                     <connections>
                         <outlet property="loginTextField" destination="hZM-WN-OjW" id="UnT-12-3tI"/>
                         <outlet property="passwordTextField" destination="C3M-Re-fHb" id="Mtz-bx-gd8"/>
+                        <outlet property="registerButton" destination="XXS-tk-QpC" id="A4W-sm-n8Z"/>
                         <outlet property="router" destination="Hcn-Bo-Td6" id="msg-pq-ijV"/>
                     </connections>
                 </viewController>

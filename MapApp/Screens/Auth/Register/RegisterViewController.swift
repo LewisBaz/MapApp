@@ -11,10 +11,12 @@ final class RegisterViewController: UIViewController {
     
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var router: LoginRouter!
     
     override func viewDidLoad() {
         setupTextFields()
+        configureLoginBindings(loginTF: loginTextField, passwordTF: passwordTextField, button: registerButton)
     }
     
     private func setupTextFields() {
@@ -29,6 +31,7 @@ final class RegisterViewController: UIViewController {
             guard let login = loginTextField.text,
                   let password = passwordTextField.text else { return }
             databaseService.addUser(User(login: login, password: password))
+            UserDefaults.standard.set(true, forKey: "isLogin")
             router.toMain()
         }
     }

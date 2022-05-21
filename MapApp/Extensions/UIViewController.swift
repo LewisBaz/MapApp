@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 extension UIViewController {
     
@@ -17,5 +19,17 @@ extension UIViewController {
             }))
         }
         self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func configureLoginBindings(loginTF: UITextField, passwordTF: UITextField, button: UIButton) {
+        Observable
+        .combineLatest(
+            loginTF.rx.text,
+            passwordTF.rx.text )
+        .map { login, password in
+            return !(login ?? "").isEmpty && (password ?? "").count >= 6 }
+        .bind { [weak button] inputFilled in
+            button?.isEnabled = inputFilled
+        }
     }
 }
