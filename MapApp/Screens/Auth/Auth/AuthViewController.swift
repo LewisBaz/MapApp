@@ -15,6 +15,15 @@ final class AuthViewController: UIViewController {
     
     private let databaseService = UserLoginDatabaseService()
     
+    override func viewDidLoad() {
+        setupTextFields()
+    }
+    
+    private func setupTextFields() {
+        loginTextField.autocorrectionType = .no
+        passwordTextField.autocorrectionType = .no
+    }
+    
     @IBAction func onRegisterTapped(_ sender: Any) {
         router.toRegister()
     }

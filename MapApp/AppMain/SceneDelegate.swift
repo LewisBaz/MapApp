@@ -27,13 +27,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func sceneDidBecomeActive(_ scene: UIScene) {
-        // Called when the scene has moved from an inactive state to an active state.
-        // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
+        guard let rvc = self.window?.rootViewController else { return }
+        if let vc = getCurrentViewController(rvc) {
+            vc.view.removeBlur()
+        }
     }
 
     func sceneWillResignActive(_ scene: UIScene) {
-        // Called when the scene will move from an active state to an inactive state.
-        // This may occur due to temporary interruptions (ex. an incoming phone call).
+        guard let rvc = self.window?.rootViewController else { return }
+        if let vc = getCurrentViewController(rvc) {
+            vc.view.makeBlur()
+        }
     }
 
     func sceneWillEnterForeground(_ scene: UIScene) {
@@ -46,7 +50,26 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
-
-
 }
 
+extension SceneDelegate {
+    
+    func getCurrentViewController(_ vc: UIViewController) -> UIViewController? {
+        if let pvc = vc.presentedViewController {
+            return getCurrentViewController(pvc)
+        }
+        else if let svc = vc as? UISplitViewController, svc.viewControllers.count > 0 {
+            return getCurrentViewController(svc.viewControllers.last!)
+        }
+        else if let nc = vc as? UINavigationController, nc.viewControllers.count > 0 {
+            return getCurrentViewController(nc.topViewController!)
+        }
+        else if let tbc = vc as? UITabBarController {
+            if let svc = tbc.selectedViewController {
+                return getCurrentViewController(svc)
+            }
+        }
+        return vc
+    }
+    
+}
