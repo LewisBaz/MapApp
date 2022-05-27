@@ -17,6 +17,18 @@
 		F4569F6D28202AB800CEBA93 /* RealmRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4569F6C28202AB800CEBA93 /* RealmRoute.swift */; };
 		F4569F7028202C0C00CEBA93 /* RoutesDatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4569F6F28202C0C00CEBA93 /* RoutesDatabaseService.swift */; };
 		F4569F742820599800CEBA93 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4569F732820599800CEBA93 /* UIViewController.swift */; };
+		F4569F7728228CAF00CEBA93 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4569F7628228CAF00CEBA93 /* User.swift */; };
+		F4569F7A28228DB300CEBA93 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4569F7928228DB300CEBA93 /* Auth.storyboard */; };
+		F4569F812822920800CEBA93 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4569F802822920800CEBA93 /* AuthViewController.swift */; };
+		F4569F832822921800CEBA93 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4569F822822921800CEBA93 /* RegisterViewController.swift */; };
+		F4569F862822938E00CEBA93 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4569F852822938E00CEBA93 /* BaseRouter.swift */; };
+		F4569F892822942A00CEBA93 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4569F882822942A00CEBA93 /* MainViewController.swift */; };
+		F4569F8B2822954E00CEBA93 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4569F8A2822954E00CEBA93 /* LoginRouter.swift */; };
+		F4569F8D282299F300CEBA93 /* BaseStoryboardCoordination.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4569F8C282299F300CEBA93 /* BaseStoryboardCoordination.swift */; };
+		F4569F8F28229CBB00CEBA93 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4569F8E28229CBB00CEBA93 /* MainRouter.swift */; };
+		F4569F92282334AA00CEBA93 /* UserLoginDatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4569F91282334AA00CEBA93 /* UserLoginDatabaseService.swift */; };
+		F4569F952823355D00CEBA93 /* BaseRealmDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4569F942823355D00CEBA93 /* BaseRealmDatabase.swift */; };
+		F4569F972823DCB400CEBA93 /* MapRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4569F962823DCB400CEBA93 /* MapRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +46,18 @@
 		F4569F6C28202AB800CEBA93 /* RealmRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRoute.swift; sourceTree = "<group>"; };
 		F4569F6F28202C0C00CEBA93 /* RoutesDatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesDatabaseService.swift; sourceTree = "<group>"; };
 		F4569F732820599800CEBA93 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		F4569F7628228CAF00CEBA93 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F4569F7928228DB300CEBA93 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		F4569F802822920800CEBA93 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		F4569F822822921800CEBA93 /* RegisterViewController.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = RegisterViewController.swift; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
+		F4569F852822938E00CEBA93 /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
+		F4569F882822942A00CEBA93 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		F4569F8A2822954E00CEBA93 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		F4569F8C282299F300CEBA93 /* BaseStoryboardCoordination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseStoryboardCoordination.swift; sourceTree = "<group>"; };
+		F4569F8E28229CBB00CEBA93 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		F4569F91282334AA00CEBA93 /* UserLoginDatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginDatabaseService.swift; sourceTree = "<group>"; };
+		F4569F942823355D00CEBA93 /* BaseRealmDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRealmDatabase.swift; sourceTree = "<group>"; };
+		F4569F962823DCB400CEBA93 /* MapRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +114,7 @@
 				F4569F722820598500CEBA93 /* Extensions */,
 				F4569F6B28202AA200CEBA93 /* Models */,
 				F4569F69281FF5FB00CEBA93 /* Resources */,
+				F4569F842822937700CEBA93 /* Routers */,
 				F4569F6E28202BEF00CEBA93 /* Services */,
 				F4569F6A281FF63500CEBA93 /* Screens */,
 			);
@@ -108,10 +133,10 @@
 		F4569F69281FF5FB00CEBA93 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F4569F7B28228DB800CEBA93 /* Storyboards */,
 				F4569F5D281FF5B100CEBA93 /* Assets.xcassets */,
 				F4569F62281FF5B100CEBA93 /* Info.plist */,
 				F4569F5F281FF5B100CEBA93 /* LaunchScreen.storyboard */,
-				F4569F5A281FF5B100CEBA93 /* Main.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -119,7 +144,9 @@
 		F4569F6A281FF63500CEBA93 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				F4569F58281FF5B100CEBA93 /* MapViewController.swift */,
+				F4569F7D282291E800CEBA93 /* Auth */,
+				F4569F872822941B00CEBA93 /* Main */,
+				F4569F7C282291E100CEBA93 /* Map */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -127,7 +154,8 @@
 		F4569F6B28202AA200CEBA93 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F4569F6C28202AB800CEBA93 /* RealmRoute.swift */,
+				F4569F7828228CB200CEBA93 /* Map */,
+				F4569F7528228CA200CEBA93 /* User */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -135,7 +163,9 @@
 		F4569F6E28202BEF00CEBA93 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				F4569F932823354300CEBA93 /* BaseRealm */,
 				F4569F6F28202C0C00CEBA93 /* RoutesDatabaseService.swift */,
+				F4569F91282334AA00CEBA93 /* UserLoginDatabaseService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -146,6 +176,100 @@
 				F4569F732820599800CEBA93 /* UIViewController.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F4569F7528228CA200CEBA93 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				F4569F7628228CAF00CEBA93 /* User.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		F4569F7828228CB200CEBA93 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				F4569F6C28202AB800CEBA93 /* RealmRoute.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		F4569F7B28228DB800CEBA93 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F4569F7928228DB300CEBA93 /* Auth.storyboard */,
+				F4569F5A281FF5B100CEBA93 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		F4569F7C282291E100CEBA93 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				F4569F58281FF5B100CEBA93 /* MapViewController.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		F4569F7D282291E800CEBA93 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				F4569F7E282291EF00CEBA93 /* Auth */,
+				F4569F7F282291F600CEBA93 /* Register */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		F4569F7E282291EF00CEBA93 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				F4569F802822920800CEBA93 /* AuthViewController.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		F4569F7F282291F600CEBA93 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				F4569F822822921800CEBA93 /* RegisterViewController.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		F4569F842822937700CEBA93 /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				F4569F90282310D400CEBA93 /* Base */,
+				F4569F8A2822954E00CEBA93 /* LoginRouter.swift */,
+				F4569F8E28229CBB00CEBA93 /* MainRouter.swift */,
+				F4569F962823DCB400CEBA93 /* MapRouter.swift */,
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		F4569F872822941B00CEBA93 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				F4569F882822942A00CEBA93 /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		F4569F90282310D400CEBA93 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F4569F8C282299F300CEBA93 /* BaseStoryboardCoordination.swift */,
+				F4569F852822938E00CEBA93 /* BaseRouter.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		F4569F932823354300CEBA93 /* BaseRealm */ = {
+			isa = PBXGroup;
+			children = (
+				F4569F942823355D00CEBA93 /* BaseRealmDatabase.swift */,
+			);
+			path = BaseRealm;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +333,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4569F7A28228DB300CEBA93 /* Auth.storyboard in Resources */,
 				F4569F61281FF5B100CEBA93 /* LaunchScreen.storyboard in Resources */,
 				F4569F5E281FF5B100CEBA93 /* Assets.xcassets in Resources */,
 				F4569F5C281FF5B100CEBA93 /* Main.storyboard in Resources */,
@@ -281,12 +406,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4569F832822921800CEBA93 /* RegisterViewController.swift in Sources */,
+				F4569F8F28229CBB00CEBA93 /* MainRouter.swift in Sources */,
+				F4569F892822942A00CEBA93 /* MainViewController.swift in Sources */,
+				F4569F952823355D00CEBA93 /* BaseRealmDatabase.swift in Sources */,
+				F4569F972823DCB400CEBA93 /* MapRouter.swift in Sources */,
+				F4569F8B2822954E00CEBA93 /* LoginRouter.swift in Sources */,
 				F4569F59281FF5B100CEBA93 /* MapViewController.swift in Sources */,
 				F4569F7028202C0C00CEBA93 /* RoutesDatabaseService.swift in Sources */,
 				F4569F55281FF5B100CEBA93 /* AppDelegate.swift in Sources */,
 				F4569F57281FF5B100CEBA93 /* SceneDelegate.swift in Sources */,
+				F4569F812822920800CEBA93 /* AuthViewController.swift in Sources */,
+				F4569F92282334AA00CEBA93 /* UserLoginDatabaseService.swift in Sources */,
+				F4569F8D282299F300CEBA93 /* BaseStoryboardCoordination.swift in Sources */,
 				F4569F742820599800CEBA93 /* UIViewController.swift in Sources */,
+				F4569F862822938E00CEBA93 /* BaseRouter.swift in Sources */,
 				F4569F6D28202AB800CEBA93 /* RealmRoute.swift in Sources */,
+				F4569F7728228CAF00CEBA93 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,7 +580,7 @@
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Need location to show your current position";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Auth;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -477,7 +613,7 @@
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Need location to show your current position";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Auth;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

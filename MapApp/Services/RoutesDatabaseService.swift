@@ -8,10 +8,7 @@
 import Foundation
 import RealmSwift
 
-final class RoutesDatabaseService {
-    
-    var config = Realm.Configuration(schemaVersion: 0)
-    lazy var realm = try! Realm(configuration: config)
+final class RoutesDatabaseService: BaseRealmDatabase {
     
     func addRoute(route: RealmRoute) {
         do {
