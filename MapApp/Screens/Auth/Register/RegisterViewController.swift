@@ -14,6 +14,8 @@ final class RegisterViewController: UIViewController {
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var router: LoginRouter!
     
+    private let databaseService = UserLoginDatabaseService()
+    
     override func viewDidLoad() {
         setupTextFields()
         configureLoginBindings(loginTF: loginTextField, passwordTF: passwordTextField, button: registerButton)
@@ -23,8 +25,6 @@ final class RegisterViewController: UIViewController {
         loginTextField.autocorrectionType = .no
         passwordTextField.autocorrectionType = .no
     }
-    
-    private let databaseService = UserLoginDatabaseService()
     
     @IBAction func onRegisterTapped(_ sender: Any) {
         if loginTextField.hasText && passwordTextField.hasText {
