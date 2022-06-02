@@ -28,8 +28,18 @@
 		F4569F8F28229CBB00CEBA93 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4569F8E28229CBB00CEBA93 /* MainRouter.swift */; };
 		F4569F92282334AA00CEBA93 /* UserLoginDatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4569F91282334AA00CEBA93 /* UserLoginDatabaseService.swift */; };
 		F4569F952823355D00CEBA93 /* BaseRealmDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4569F942823355D00CEBA93 /* BaseRealmDatabase.swift */; };
-		F4569F972823DCB400CEBA93 /* MapRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4569F962823DCB400CEBA93 /* MapRouter.swift */; };
 		F4569F99282F304900CEBA93 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4569F98282F304900CEBA93 /* UIView.swift */; };
+		F481B0C82849615D00D8197E /* MarkedLocationsDatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F481B0C72849615D00D8197E /* MarkedLocationsDatabaseService.swift */; };
+		F4AEDAF92843055C00B8C5C2 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEDAF82843055C00B8C5C2 /* TabBarController.swift */; };
+		F4AEDAFC2843067D00B8C5C2 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEDAFB2843067D00B8C5C2 /* LocationsViewController.swift */; };
+		F4AEDAFE2843077600B8C5C2 /* MapRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEDAFD2843077600B8C5C2 /* MapRouter.swift */; };
+		F4AEDB012843090D00B8C5C2 /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEDB002843090D00B8C5C2 /* LocationTableViewCell.swift */; };
+		F4CAFC8D28427CCF00173D57 /* LocalNotificationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CAFC8C28427CCF00173D57 /* LocalNotificationsService.swift */; };
+		F4CAFC9028427DE800173D57 /* AlertControllerAssistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CAFC8F28427DE800173D57 /* AlertControllerAssistant.swift */; };
+		F4CAFC932842B4BF00173D57 /* NotificationsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CAFC922842B4BF00173D57 /* NotificationsFactory.swift */; };
+		F4CAFC962842B5F600173D57 /* NotificationOnAppClose.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CAFC952842B5F600173D57 /* NotificationOnAppClose.swift */; };
+		F4CAFC982842C21100173D57 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CAFC972842C21100173D57 /* Location.swift */; };
+		F4CAFC9A2842C5DA00173D57 /* NotificationOnRecievingVisit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CAFC992842C5DA00173D57 /* NotificationOnRecievingVisit.swift */; };
 		F4D5714C28398F670002CE17 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D5714B28398F670002CE17 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,8 +69,18 @@
 		F4569F8E28229CBB00CEBA93 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 		F4569F91282334AA00CEBA93 /* UserLoginDatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginDatabaseService.swift; sourceTree = "<group>"; };
 		F4569F942823355D00CEBA93 /* BaseRealmDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRealmDatabase.swift; sourceTree = "<group>"; };
-		F4569F962823DCB400CEBA93 /* MapRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRouter.swift; sourceTree = "<group>"; };
 		F4569F98282F304900CEBA93 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		F481B0C72849615D00D8197E /* MarkedLocationsDatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkedLocationsDatabaseService.swift; sourceTree = "<group>"; };
+		F4AEDAF82843055C00B8C5C2 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		F4AEDAFB2843067D00B8C5C2 /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
+		F4AEDAFD2843077600B8C5C2 /* MapRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapRouter.swift; path = MapApp/Routers/MapRouter.swift; sourceTree = SOURCE_ROOT; };
+		F4AEDB002843090D00B8C5C2 /* LocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTableViewCell.swift; sourceTree = "<group>"; };
+		F4CAFC8C28427CCF00173D57 /* LocalNotificationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationsService.swift; sourceTree = "<group>"; };
+		F4CAFC8F28427DE800173D57 /* AlertControllerAssistant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControllerAssistant.swift; sourceTree = "<group>"; };
+		F4CAFC922842B4BF00173D57 /* NotificationsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsFactory.swift; sourceTree = "<group>"; };
+		F4CAFC952842B5F600173D57 /* NotificationOnAppClose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationOnAppClose.swift; sourceTree = "<group>"; };
+		F4CAFC972842C21100173D57 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		F4CAFC992842C5DA00173D57 /* NotificationOnRecievingVisit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationOnRecievingVisit.swift; sourceTree = "<group>"; };
 		F4D5714B28398F670002CE17 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				F4569F68281FF5F200CEBA93 /* AppMain */,
+				F4CAFC8E28427DA900173D57 /* CustomUIElements */,
 				F4569F722820598500CEBA93 /* Extensions */,
 				F4569F6B28202AA200CEBA93 /* Models */,
 				F4569F69281FF5FB00CEBA93 /* Resources */,
@@ -149,8 +170,10 @@
 			isa = PBXGroup;
 			children = (
 				F4569F7D282291E800CEBA93 /* Auth */,
+				F4AEDAFA2843066600B8C5C2 /* Locations */,
 				F4569F872822941B00CEBA93 /* Main */,
 				F4569F7C282291E100CEBA93 /* Map */,
+				F4CAFC9B2842D75200173D57 /* TabBar */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -169,6 +192,7 @@
 			children = (
 				F4D5714928398F360002CE17 /* DatabaseServices */,
 				F4D5714A28398F550002CE17 /* MapServices */,
+				F4CAFC8B28427CA600173D57 /* NotificationServices */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -193,6 +217,7 @@
 		F4569F7828228CB200CEBA93 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				F4CAFC972842C21100173D57 /* Location.swift */,
 				F4569F6C28202AB800CEBA93 /* RealmRoute.swift */,
 			);
 			path = Map;
@@ -246,7 +271,7 @@
 				F4569F90282310D400CEBA93 /* Base */,
 				F4569F8A2822954E00CEBA93 /* LoginRouter.swift */,
 				F4569F8E28229CBB00CEBA93 /* MainRouter.swift */,
-				F4569F962823DCB400CEBA93 /* MapRouter.swift */,
+				F4AEDAFD2843077600B8C5C2 /* MapRouter.swift */,
 			);
 			path = Routers;
 			sourceTree = "<group>";
@@ -276,10 +301,71 @@
 			path = BaseRealm;
 			sourceTree = "<group>";
 		};
+		F4AEDAFA2843066600B8C5C2 /* Locations */ = {
+			isa = PBXGroup;
+			children = (
+				F4AEDAFF284308FB00B8C5C2 /* Cells */,
+				F4AEDAFB2843067D00B8C5C2 /* LocationsViewController.swift */,
+			);
+			path = Locations;
+			sourceTree = "<group>";
+		};
+		F4AEDAFF284308FB00B8C5C2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F4AEDB002843090D00B8C5C2 /* LocationTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		F4CAFC8B28427CA600173D57 /* NotificationServices */ = {
+			isa = PBXGroup;
+			children = (
+				F4CAFC912842B4A600173D57 /* NotificationsFactory */,
+				F4CAFC8C28427CCF00173D57 /* LocalNotificationsService.swift */,
+			);
+			path = NotificationServices;
+			sourceTree = "<group>";
+		};
+		F4CAFC8E28427DA900173D57 /* CustomUIElements */ = {
+			isa = PBXGroup;
+			children = (
+				F4CAFC8F28427DE800173D57 /* AlertControllerAssistant.swift */,
+			);
+			path = CustomUIElements;
+			sourceTree = "<group>";
+		};
+		F4CAFC912842B4A600173D57 /* NotificationsFactory */ = {
+			isa = PBXGroup;
+			children = (
+				F4CAFC942842B5E200173D57 /* Notifications */,
+				F4CAFC922842B4BF00173D57 /* NotificationsFactory.swift */,
+			);
+			path = NotificationsFactory;
+			sourceTree = "<group>";
+		};
+		F4CAFC942842B5E200173D57 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				F4CAFC952842B5F600173D57 /* NotificationOnAppClose.swift */,
+				F4CAFC992842C5DA00173D57 /* NotificationOnRecievingVisit.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		F4CAFC9B2842D75200173D57 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				F4AEDAF82843055C00B8C5C2 /* TabBarController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 		F4D5714928398F360002CE17 /* DatabaseServices */ = {
 			isa = PBXGroup;
 			children = (
 				F4569F932823354300CEBA93 /* BaseRealm */,
+				F481B0C72849615D00D8197E /* MarkedLocationsDatabaseService.swift */,
 				F4569F6F28202C0C00CEBA93 /* RoutesDatabaseService.swift */,
 				F4569F91282334AA00CEBA93 /* UserLoginDatabaseService.swift */,
 			);
@@ -432,21 +518,31 @@
 				F4569F8F28229CBB00CEBA93 /* MainRouter.swift in Sources */,
 				F4569F892822942A00CEBA93 /* MainViewController.swift in Sources */,
 				F4569F952823355D00CEBA93 /* BaseRealmDatabase.swift in Sources */,
-				F4569F972823DCB400CEBA93 /* MapRouter.swift in Sources */,
+				F4CAFC9028427DE800173D57 /* AlertControllerAssistant.swift in Sources */,
+				F4CAFC8D28427CCF00173D57 /* LocalNotificationsService.swift in Sources */,
 				F4569F8B2822954E00CEBA93 /* LoginRouter.swift in Sources */,
 				F4D5714C28398F670002CE17 /* LocationManager.swift in Sources */,
+				F4AEDAFE2843077600B8C5C2 /* MapRouter.swift in Sources */,
 				F4569F59281FF5B100CEBA93 /* MapViewController.swift in Sources */,
+				F4CAFC982842C21100173D57 /* Location.swift in Sources */,
 				F4569F7028202C0C00CEBA93 /* RoutesDatabaseService.swift in Sources */,
 				F4569F55281FF5B100CEBA93 /* AppDelegate.swift in Sources */,
 				F4569F57281FF5B100CEBA93 /* SceneDelegate.swift in Sources */,
 				F4569F812822920800CEBA93 /* AuthViewController.swift in Sources */,
+				F481B0C82849615D00D8197E /* MarkedLocationsDatabaseService.swift in Sources */,
 				F4569F92282334AA00CEBA93 /* UserLoginDatabaseService.swift in Sources */,
 				F4569F8D282299F300CEBA93 /* BaseStoryboardCoordination.swift in Sources */,
 				F4569F742820599800CEBA93 /* UIViewController.swift in Sources */,
+				F4CAFC9A2842C5DA00173D57 /* NotificationOnRecievingVisit.swift in Sources */,
 				F4569F862822938E00CEBA93 /* BaseRouter.swift in Sources */,
+				F4AEDAF92843055C00B8C5C2 /* TabBarController.swift in Sources */,
 				F4569F6D28202AB800CEBA93 /* RealmRoute.swift in Sources */,
+				F4AEDB012843090D00B8C5C2 /* LocationTableViewCell.swift in Sources */,
+				F4AEDAFC2843067D00B8C5C2 /* LocationsViewController.swift in Sources */,
 				F4569F99282F304900CEBA93 /* UIView.swift in Sources */,
+				F4CAFC962842B5F600173D57 /* NotificationOnAppClose.swift in Sources */,
 				F4569F7728228CAF00CEBA93 /* User.swift in Sources */,
+				F4CAFC932842B4BF00173D57 /* NotificationsFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
