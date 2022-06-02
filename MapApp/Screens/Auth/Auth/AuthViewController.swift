@@ -11,12 +11,14 @@ final class AuthViewController: UIViewController {
     
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var router: LoginRouter!
     
     private let databaseService = UserLoginDatabaseService()
     
     override func viewDidLoad() {
         setupTextFields()
+        configureLoginBindings(loginTF: loginTextField, passwordTF: passwordTextField, button: loginButton)
     }
     
     private func setupTextFields() {
@@ -34,6 +36,7 @@ final class AuthViewController: UIViewController {
                   let password = passwordTextField.text else { return }
             let isRegistered = databaseService.checkUser(User(login: login, password: password))
             if isRegistered {
+                UserDefaults.standard.set(true, forKey: "isLogin")
                 router.toMain()
             } else {
                 presentAlertWithTitle(title: "Wrong login or password", message: "Please, try again or register if you haven't done it yet", options: "OK", completion: { [weak self] _ in

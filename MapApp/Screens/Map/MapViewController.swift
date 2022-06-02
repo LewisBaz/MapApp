@@ -15,7 +15,7 @@ class MapViewController: UIViewController {
     @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var router: MapRouter!
     
-    var locationManager: CLLocationManager?
+    let locationManager = LocationManager.instance
     private let geocoder = CLGeocoder()
     private let databaseService = RoutesDatabaseService()
     var route: GMSPolyline?
@@ -41,16 +41,6 @@ class MapViewController: UIViewController {
         mapView.settings.myLocationButton = true
     }
     
-    private func configureLocationManager() {
-        locationManager = CLLocationManager()
-        locationManager?.delegate = self
-        locationManager?.allowsBackgroundLocationUpdates = true
-        locationManager?.requestAlwaysAuthorization()
-        locationManager?.pausesLocationUpdatesAutomatically = false
-        locationManager?.startMonitoringSignificantLocationChanges()
-        locationManager?.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-    }
-    
     private func addMarker(coordinate: CLLocationCoordinate2D) {
         let marker = GMSMarker(position: coordinate)
         marker.map = mapView
@@ -68,14 +58,14 @@ class MapViewController: UIViewController {
         currentRoute?.strokeWidth = 3
         currentRoutePath = GMSMutablePath()
         currentRoute?.map = mapView
-        locationManager?.startUpdatingLocation()
+        locationManager.startUpdatingLocation()
     }
     
     @IBAction func stopRouteAction(_ sender: Any) {
         isRoutingNow = false
         let finishedPath = RealmRoute(decodedRoute: currentRoutePath?.encodedPath() ?? "")
         saveLastRoute(route: finishedPath)
-        locationManager?.stopUpdatingLocation()
+        locationManager.stopUpdatingLocation()
     }
     
     @IBAction func showLastRoute(_ sender: Any) {
@@ -85,16 +75,37 @@ class MapViewController: UIViewController {
                 switch option {
                 case "OK":
                     self.isRoutingNow = false
-                    self.locationManager?.stopUpdatingLocation()
+                    self.locationManager.stopUpdatingLocation()
                     self.makeLastRoute()
                 default:
                     break
                 }
             })
         } else {
-            locationManager?.stopUpdatingLocation()
+            locationManager.stopUpdatingLocation()
             makeLastRoute()
         }
+    }
+    
+    private func configureLocationManager() {
+        locationManager
+            .location
+            .asObservable()
+            .bind { [weak self] location in
+                guard let location = location,
+                      let self = self else { return }
+                if self.isRoutingNow {
+                    self.currentRoutePath?.add(location.coordinate)
+                    self.currentRoute?.path = self.currentRoutePath
+                }
+                
+                self.mapView.animate(toLocation: CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude))
+                //addMarker(coordinate: location.coordinate)
+
+                self.geocoder.reverseGeocodeLocation(location) { places, error in
+                    print(places?.first as Any)
+                }
+            }
     }
     
     private func makeLastRoute() {
@@ -128,30 +139,7 @@ extension MapViewController: GMSMapViewDelegate {
     }
     
     func didTapMyLocationButton(for mapView: GMSMapView) -> Bool {
-        locationManager?.requestLocation()
+        locationManager.requestLocation()
         return true
-    }
-}
-
-extension MapViewController: CLLocationManagerDelegate {
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
-        guard let location = locations.last else { return }
-        if isRoutingNow {
-            currentRoutePath?.add(location.coordinate)
-            currentRoute?.path = currentRoutePath
-        } 
-        
-        mapView.animate(toLocation: CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude))
-        //addMarker(coordinate: location.coordinate)
-
-        geocoder.reverseGeocodeLocation(location) { places, error in
-            print(places?.first as Any)
-        }
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print(error)
     }
 }

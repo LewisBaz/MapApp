@@ -30,6 +30,7 @@
 		F4569F952823355D00CEBA93 /* BaseRealmDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4569F942823355D00CEBA93 /* BaseRealmDatabase.swift */; };
 		F4569F972823DCB400CEBA93 /* MapRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4569F962823DCB400CEBA93 /* MapRouter.swift */; };
 		F4569F99282F304900CEBA93 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4569F98282F304900CEBA93 /* UIView.swift */; };
+		F4D5714C28398F670002CE17 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D5714B28398F670002CE17 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		F4569F942823355D00CEBA93 /* BaseRealmDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRealmDatabase.swift; sourceTree = "<group>"; };
 		F4569F962823DCB400CEBA93 /* MapRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRouter.swift; sourceTree = "<group>"; };
 		F4569F98282F304900CEBA93 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		F4D5714B28398F670002CE17 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,9 +167,8 @@
 		F4569F6E28202BEF00CEBA93 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				F4569F932823354300CEBA93 /* BaseRealm */,
-				F4569F6F28202C0C00CEBA93 /* RoutesDatabaseService.swift */,
-				F4569F91282334AA00CEBA93 /* UserLoginDatabaseService.swift */,
+				F4D5714928398F360002CE17 /* DatabaseServices */,
+				F4D5714A28398F550002CE17 /* MapServices */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -273,6 +274,24 @@
 				F4569F942823355D00CEBA93 /* BaseRealmDatabase.swift */,
 			);
 			path = BaseRealm;
+			sourceTree = "<group>";
+		};
+		F4D5714928398F360002CE17 /* DatabaseServices */ = {
+			isa = PBXGroup;
+			children = (
+				F4569F932823354300CEBA93 /* BaseRealm */,
+				F4569F6F28202C0C00CEBA93 /* RoutesDatabaseService.swift */,
+				F4569F91282334AA00CEBA93 /* UserLoginDatabaseService.swift */,
+			);
+			path = DatabaseServices;
+			sourceTree = "<group>";
+		};
+		F4D5714A28398F550002CE17 /* MapServices */ = {
+			isa = PBXGroup;
+			children = (
+				F4D5714B28398F670002CE17 /* LocationManager.swift */,
+			);
+			path = MapServices;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -415,6 +434,7 @@
 				F4569F952823355D00CEBA93 /* BaseRealmDatabase.swift in Sources */,
 				F4569F972823DCB400CEBA93 /* MapRouter.swift in Sources */,
 				F4569F8B2822954E00CEBA93 /* LoginRouter.swift in Sources */,
+				F4D5714C28398F670002CE17 /* LocationManager.swift in Sources */,
 				F4569F59281FF5B100CEBA93 /* MapViewController.swift in Sources */,
 				F4569F7028202C0C00CEBA93 /* RoutesDatabaseService.swift in Sources */,
 				F4569F55281FF5B100CEBA93 /* AppDelegate.swift in Sources */,
@@ -584,7 +604,6 @@
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Need location to show your current position";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Auth;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -617,7 +636,6 @@
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Need location to show your current position";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Auth;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

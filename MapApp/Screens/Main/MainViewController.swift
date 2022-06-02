@@ -16,6 +16,7 @@ final class MainViewController: UIViewController {
     }
     
     @IBAction func onLogOutTapped(_ sender: Any) {
+        UserDefaults.standard.set(false, forKey: "isLogin")
         router.toLaunch()
     }
 }
