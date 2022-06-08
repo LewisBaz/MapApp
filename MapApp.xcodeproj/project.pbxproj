@@ -30,6 +30,13 @@
 		F4569F952823355D00CEBA93 /* BaseRealmDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4569F942823355D00CEBA93 /* BaseRealmDatabase.swift */; };
 		F4569F99282F304900CEBA93 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4569F98282F304900CEBA93 /* UIView.swift */; };
 		F481B0C82849615D00D8197E /* MarkedLocationsDatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F481B0C72849615D00D8197E /* MarkedLocationsDatabaseService.swift */; };
+		F481B0CB284A3ED500D8197E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F481B0CA284A3ED500D8197E /* ProfileViewController.swift */; };
+		F481B0CD284A40D000D8197E /* ProfileBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F481B0CC284A40D000D8197E /* ProfileBarButtonItem.swift */; };
+		F481B0D1284A4BBF00D8197E /* TabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F481B0D0284A4BBF00D8197E /* TabBarRouter.swift */; };
+		F481B0D4284A56C600D8197E /* ImagePickerControllerSourceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F481B0D3284A56C600D8197E /* ImagePickerControllerSourceType.swift */; };
+		F481B0D7284A657B00D8197E /* ImageSaverToFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = F481B0D6284A657B00D8197E /* ImageSaverToFiles.swift */; };
+		F481B0DA284A69CC00D8197E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F481B0D9284A69CC00D8197E /* Constants.swift */; };
+		F481B0DC284A75F400D8197E /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F481B0DB284A75F400D8197E /* UIImage.swift */; };
 		F4AEDAF92843055C00B8C5C2 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEDAF82843055C00B8C5C2 /* TabBarController.swift */; };
 		F4AEDAFC2843067D00B8C5C2 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEDAFB2843067D00B8C5C2 /* LocationsViewController.swift */; };
 		F4AEDAFE2843077600B8C5C2 /* MapRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEDAFD2843077600B8C5C2 /* MapRouter.swift */; };
@@ -71,6 +78,13 @@
 		F4569F942823355D00CEBA93 /* BaseRealmDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRealmDatabase.swift; sourceTree = "<group>"; };
 		F4569F98282F304900CEBA93 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		F481B0C72849615D00D8197E /* MarkedLocationsDatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkedLocationsDatabaseService.swift; sourceTree = "<group>"; };
+		F481B0CA284A3ED500D8197E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F481B0CC284A40D000D8197E /* ProfileBarButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBarButtonItem.swift; sourceTree = "<group>"; };
+		F481B0D0284A4BBF00D8197E /* TabBarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarRouter.swift; sourceTree = "<group>"; };
+		F481B0D3284A56C600D8197E /* ImagePickerControllerSourceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerControllerSourceType.swift; sourceTree = "<group>"; };
+		F481B0D6284A657B00D8197E /* ImageSaverToFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaverToFiles.swift; sourceTree = "<group>"; };
+		F481B0D9284A69CC00D8197E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F481B0DB284A75F400D8197E /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		F4AEDAF82843055C00B8C5C2 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		F4AEDAFB2843067D00B8C5C2 /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
 		F4AEDAFD2843077600B8C5C2 /* MapRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapRouter.swift; path = MapApp/Routers/MapRouter.swift; sourceTree = SOURCE_ROOT; };
@@ -135,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				F4569F68281FF5F200CEBA93 /* AppMain */,
+				F481B0D8284A698200D8197E /* Constants */,
 				F4CAFC8E28427DA900173D57 /* CustomUIElements */,
 				F4569F722820598500CEBA93 /* Extensions */,
 				F4569F6B28202AA200CEBA93 /* Models */,
@@ -173,6 +188,7 @@
 				F4AEDAFA2843066600B8C5C2 /* Locations */,
 				F4569F872822941B00CEBA93 /* Main */,
 				F4569F7C282291E100CEBA93 /* Map */,
+				F481B0C9284A3EBA00D8197E /* Profile */,
 				F4CAFC9B2842D75200173D57 /* TabBar */,
 			);
 			path = Screens;
@@ -181,6 +197,7 @@
 		F4569F6B28202AA200CEBA93 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F481B0D2284A56B300D8197E /* Camera */,
 				F4569F7828228CB200CEBA93 /* Map */,
 				F4569F7528228CA200CEBA93 /* User */,
 			);
@@ -191,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				F4D5714928398F360002CE17 /* DatabaseServices */,
+				F481B0D5284A655300D8197E /* FileManagerServices */,
 				F4D5714A28398F550002CE17 /* MapServices */,
 				F4CAFC8B28427CA600173D57 /* NotificationServices */,
 			);
@@ -200,8 +218,9 @@
 		F4569F722820598500CEBA93 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				F4569F732820599800CEBA93 /* UIViewController.swift */,
+				F481B0DB284A75F400D8197E /* UIImage.swift */,
 				F4569F98282F304900CEBA93 /* UIView.swift */,
+				F4569F732820599800CEBA93 /* UIViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -272,6 +291,7 @@
 				F4569F8A2822954E00CEBA93 /* LoginRouter.swift */,
 				F4569F8E28229CBB00CEBA93 /* MainRouter.swift */,
 				F4AEDAFD2843077600B8C5C2 /* MapRouter.swift */,
+				F481B0D0284A4BBF00D8197E /* TabBarRouter.swift */,
 			);
 			path = Routers;
 			sourceTree = "<group>";
@@ -299,6 +319,38 @@
 				F4569F942823355D00CEBA93 /* BaseRealmDatabase.swift */,
 			);
 			path = BaseRealm;
+			sourceTree = "<group>";
+		};
+		F481B0C9284A3EBA00D8197E /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				F481B0CA284A3ED500D8197E /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		F481B0D2284A56B300D8197E /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				F481B0D3284A56C600D8197E /* ImagePickerControllerSourceType.swift */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		F481B0D5284A655300D8197E /* FileManagerServices */ = {
+			isa = PBXGroup;
+			children = (
+				F481B0D6284A657B00D8197E /* ImageSaverToFiles.swift */,
+			);
+			path = FileManagerServices;
+			sourceTree = "<group>";
+		};
+		F481B0D8284A698200D8197E /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				F481B0D9284A69CC00D8197E /* Constants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		F4AEDAFA2843066600B8C5C2 /* Locations */ = {
@@ -331,6 +383,7 @@
 			isa = PBXGroup;
 			children = (
 				F4CAFC8F28427DE800173D57 /* AlertControllerAssistant.swift */,
+				F481B0CC284A40D000D8197E /* ProfileBarButtonItem.swift */,
 			);
 			path = CustomUIElements;
 			sourceTree = "<group>";
@@ -517,15 +570,19 @@
 				F4569F832822921800CEBA93 /* RegisterViewController.swift in Sources */,
 				F4569F8F28229CBB00CEBA93 /* MainRouter.swift in Sources */,
 				F4569F892822942A00CEBA93 /* MainViewController.swift in Sources */,
+				F481B0D7284A657B00D8197E /* ImageSaverToFiles.swift in Sources */,
 				F4569F952823355D00CEBA93 /* BaseRealmDatabase.swift in Sources */,
+				F481B0D4284A56C600D8197E /* ImagePickerControllerSourceType.swift in Sources */,
 				F4CAFC9028427DE800173D57 /* AlertControllerAssistant.swift in Sources */,
 				F4CAFC8D28427CCF00173D57 /* LocalNotificationsService.swift in Sources */,
 				F4569F8B2822954E00CEBA93 /* LoginRouter.swift in Sources */,
 				F4D5714C28398F670002CE17 /* LocationManager.swift in Sources */,
+				F481B0DA284A69CC00D8197E /* Constants.swift in Sources */,
 				F4AEDAFE2843077600B8C5C2 /* MapRouter.swift in Sources */,
 				F4569F59281FF5B100CEBA93 /* MapViewController.swift in Sources */,
 				F4CAFC982842C21100173D57 /* Location.swift in Sources */,
 				F4569F7028202C0C00CEBA93 /* RoutesDatabaseService.swift in Sources */,
+				F481B0CB284A3ED500D8197E /* ProfileViewController.swift in Sources */,
 				F4569F55281FF5B100CEBA93 /* AppDelegate.swift in Sources */,
 				F4569F57281FF5B100CEBA93 /* SceneDelegate.swift in Sources */,
 				F4569F812822920800CEBA93 /* AuthViewController.swift in Sources */,
@@ -539,10 +596,13 @@
 				F4569F6D28202AB800CEBA93 /* RealmRoute.swift in Sources */,
 				F4AEDB012843090D00B8C5C2 /* LocationTableViewCell.swift in Sources */,
 				F4AEDAFC2843067D00B8C5C2 /* LocationsViewController.swift in Sources */,
+				F481B0D1284A4BBF00D8197E /* TabBarRouter.swift in Sources */,
 				F4569F99282F304900CEBA93 /* UIView.swift in Sources */,
 				F4CAFC962842B5F600173D57 /* NotificationOnAppClose.swift in Sources */,
 				F4569F7728228CAF00CEBA93 /* User.swift in Sources */,
+				F481B0DC284A75F400D8197E /* UIImage.swift in Sources */,
 				F4CAFC932842B4BF00173D57 /* NotificationsFactory.swift in Sources */,
+				F481B0CD284A40D000D8197E /* ProfileBarButtonItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

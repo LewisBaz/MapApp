@@ -20,15 +20,19 @@ final class LocationsViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureTableView()
         locations = getLocationResults()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        configureTableViewController()
     }
     
     private func getLocationResults() -> Results<Location> {
         return locationsDatabaseService.recieveLocations()
     }
     
-    private func configureTableView() {
+    private func configureTableViewController() {
         navigationController?.navigationBar.topItem?.title = "Recent locations"
         navigationController?.navigationBar.prefersLargeTitles = true
         tableView.rowHeight = UITableView.automaticDimension

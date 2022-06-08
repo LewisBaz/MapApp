@@ -15,6 +15,7 @@ final class AuthViewController: UIViewController {
     @IBOutlet weak var router: LoginRouter!
     
     private let databaseService = UserLoginDatabaseService()
+    private let userDefaultsStandart = UserDefaults.standard
     
     override func viewDidLoad() {
         setupTextFields()
@@ -36,7 +37,8 @@ final class AuthViewController: UIViewController {
                   let password = passwordTextField.text else { return }
             let isRegistered = databaseService.checkUser(User(login: login, password: password))
             if isRegistered {
-                UserDefaults.standard.set(isRegistered, forKey: "isLogin")
+                userDefaultsStandart.set(isRegistered, forKey: "isLogin")
+                userDefaultsStandart.set(login, forKey: "UserLoginName")
                 router.toMain()
             } else {
                 let alertAssistant = AlertControllerAssistant(title: "Wrong login or password",

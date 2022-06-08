@@ -9,6 +9,8 @@ import UIKit
 
 final class MainViewController: UIViewController {
     
+    private let imageSaver = ImageSaverToFiles()
+    
     @IBOutlet weak var router: MainRouter!
     
     override func viewWillAppear(_ animated: Bool) {
@@ -27,6 +29,8 @@ final class MainViewController: UIViewController {
     
     @IBAction func onLogOutTapped(_ sender: Any) {
         UserDefaults.standard.set(false, forKey: "isLogin")
+        UserDefaults.standard.removeObject(forKey: "UserLoginName")
+        imageSaver.deleteImageFromDisk(fileName: Constants.savedAvatarImageFileNameString)
         router.toLaunch()
     }
 }

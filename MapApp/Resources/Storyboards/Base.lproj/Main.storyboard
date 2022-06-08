@@ -64,6 +64,47 @@
             </objects>
             <point key="canvasLocation" x="1379.7101449275362" y="97.767857142857139"/>
         </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="s3y-Fi-7Sx">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" id="eeW-Q9-OV8" customClass="ProfileViewController" customModule="MapApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ISI-7T-bTj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="awn-Xe-W6S">
+                                <rect key="frame" x="20" y="54" width="374" height="374"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="awn-Xe-W6S" secondAttribute="height" id="ydx-xE-vkh"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQ3-Rp-wHD">
+                                <rect key="frame" x="162.5" y="488" width="89.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Set avatar"/>
+                                <connections>
+                                    <action selector="setAvatar:" destination="eeW-Q9-OV8" eventType="touchUpInside" id="wV4-gB-eXE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bo8-mb-wC4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="awn-Xe-W6S" firstAttribute="leading" secondItem="bo8-mb-wC4" secondAttribute="leading" constant="20" id="Hpo-Am-iRN"/>
+                            <constraint firstItem="rQ3-Rp-wHD" firstAttribute="top" secondItem="awn-Xe-W6S" secondAttribute="bottom" constant="60" id="dEJ-iK-FTH"/>
+                            <constraint firstItem="awn-Xe-W6S" firstAttribute="top" secondItem="bo8-mb-wC4" secondAttribute="top" constant="10" id="g9c-Q9-CRc"/>
+                            <constraint firstItem="bo8-mb-wC4" firstAttribute="trailing" secondItem="awn-Xe-W6S" secondAttribute="trailing" constant="20" id="m8Q-Uf-zIH"/>
+                            <constraint firstItem="rQ3-Rp-wHD" firstAttribute="centerX" secondItem="ISI-7T-bTj" secondAttribute="centerX" id="occ-aQ-NRI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="profileImageView" destination="awn-Xe-W6S" id="sU0-As-XyN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gMk-Ux-xTm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="470" y="-626"/>
+        </scene>
         <!--Map-->
         <scene sceneID="rBe-tO-9Pw">
             <objects>
@@ -172,11 +213,17 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
+                        <outlet property="router" destination="bbI-5o-oUw" id="ZWb-gm-mpx"/>
                         <segue destination="qKx-3k-D5w" kind="relationship" relationship="viewControllers" id="USg-yg-aer"/>
                         <segue destination="Okl-Ko-1Xs" kind="relationship" relationship="viewControllers" id="EoH-X6-LHC"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pvc-U8-B5E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="bbI-5o-oUw" customClass="TabBarRouter" customModule="MapApp" customModuleProvider="target">
+                    <connections>
+                        <outlet property="controller" destination="Bbg-W5-nYu" id="Mo9-B9-V2f"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="-523" y="467"/>
         </scene>
