@@ -11,7 +11,7 @@ final class MapRouter: BaseRouter {
     
     func toMain() {
         let controller = UIStoryboard(name: "Main", bundle: nil)
-            .instantiateViewController(MainViewController.self)
+            .instantiateViewController(TabBarController.self)
         setAsRoot(UINavigationController(rootViewController: controller))
     }
 }

@@ -11,6 +11,16 @@ final class MainViewController: UIViewController {
     
     @IBOutlet weak var router: MainRouter!
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        configureController()
+    }
+    
+    private func configureController() {
+        navigationController?.navigationBar.topItem?.title = "Map"
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
     @IBAction func goToMapTapped(_ sender: Any) {
         router.toMap()
     }

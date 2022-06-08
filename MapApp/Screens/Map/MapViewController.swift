@@ -33,6 +33,16 @@ class MapViewController: UIViewController {
         configureLocationManager()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        configureController()
+    }
+    
+    private func configureController() {
+        navigationController?.navigationBar.topItem?.title = nil
+        navigationController?.navigationBar.prefersLargeTitles = false
+    }
+    
     private func configureMap() {
         mapView.delegate = self
         let camera = GMSCameraPosition(target: coordinatesSPB, zoom: 15)
@@ -70,7 +80,11 @@ class MapViewController: UIViewController {
     
     @IBAction func showLastRoute(_ sender: Any) {
         if isRoutingNow {
-            presentAlertWithTitle(title: "You are routing now!", message: "If you want to see last route, we need to finish current route", options: "OK", "Cancel", completion: { [weak self] option in
+            let alertAssistant = AlertControllerAssistant(title: "You are routing now!",
+                                                          message: "If you want to see last route, we need to finish current route",
+                                                          options: ["OK", "Cancel"],
+                                                          caller: self)
+            alertAssistant.presentAlertWithTitle(completion: { [weak self] option in
                 guard let self = self else { return }
                 switch option {
                 case "OK":
