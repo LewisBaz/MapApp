@@ -11,22 +11,16 @@ import GoogleMaps
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
+    private let localNotificationService = LocalNotificationsService()
+    private let locationManager = LocationManager.instance
+    
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         GMSServices.provideAPIKey("AIzaSyBYEqbtXY4aQG0orZgPaOPXYur8PRILenA")
-            
-        let controller: UIViewController
-        let isLogin = UserDefaults.standard.bool(forKey: "isLogin")
-        if isLogin {
-            controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(MainViewController.self)
-        } else {
-            controller = UIStoryboard(name: "Auth", bundle: nil).instantiateViewController(AuthViewController.self)
-        }
-        window = UIWindow()
-        window?.rootViewController = UINavigationController(rootViewController: controller)
-        window?.makeKeyAndVisible()
         
+        UIApplication.shared.applicationIconBadgeNumber = 0
+        localNotificationService.grantAccessToNotifications()
         return true
     }
 

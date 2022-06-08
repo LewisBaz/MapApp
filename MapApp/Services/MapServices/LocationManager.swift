@@ -13,7 +13,9 @@ import RxRelay
 final class LocationManager: NSObject {
     
     static let instance = LocationManager()
-    let locationManager = CLLocationManager()
+    private let locationManager = CLLocationManager()
+    private let geoCoder = CLGeocoder()
+    private let locationsDatabaseService = MarkedLocationsDatabaseService()
     
     let location: BehaviorRelay<CLLocation?> = BehaviorRelay(value: nil)
     
@@ -29,6 +31,7 @@ final class LocationManager: NSObject {
         locationManager.pausesLocationUpdatesAutomatically = false
         locationManager.startMonitoringSignificantLocationChanges()
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        locationManager.startMonitoringVisits()
     }
     
     func startUpdatingLocation() {
@@ -52,5 +55,28 @@ extension LocationManager: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error)
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didVisit visit: CLVisit) {
+        let location = CLLocation(latitude: visit.coordinate.latitude, longitude: visit.coordinate.longitude)
+        geoCoder.reverseGeocodeLocation(location) { placemarks, error in
+            if let place = placemarks?.first {
+                let description = "\(place)"
+                self.newVisitReceived(visit, description: description)
+              }
+            if let error = error {
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func newVisitReceived(_ visit: CLVisit, description: String) {
+        let location = Location(visit: visit, descriptionString: description)
+        locationsDatabaseService.saveLocation(location)
+        
+        let notificationsFactory = NotificationsFactory(locationDescription: description)
+        let notification = notificationsFactory.createNotification(essense: .notificationOnRecievingVisit)
+        notification.sendNotificatioRequest(content: notification.makeNotificationContent(),
+                                            trigger: notification.makeIntervalNotificatioTrigger())
     }
 }

@@ -15,6 +15,7 @@ final class RegisterViewController: UIViewController {
     @IBOutlet weak var router: LoginRouter!
     
     private let databaseService = UserLoginDatabaseService()
+    private let userDefaultsStandart = UserDefaults.standard
     
     override func viewDidLoad() {
         setupTextFields()
@@ -31,7 +32,8 @@ final class RegisterViewController: UIViewController {
             guard let login = loginTextField.text,
                   let password = passwordTextField.text else { return }
             databaseService.addUser(User(login: login, password: password))
-            UserDefaults.standard.set(true, forKey: "isLogin")
+            userDefaultsStandart.set(true, forKey: "isLogin")
+            userDefaultsStandart.set(login, forKey: "UserLoginName")
             router.toMain()
         }
     }

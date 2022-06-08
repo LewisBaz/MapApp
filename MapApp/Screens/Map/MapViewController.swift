@@ -22,15 +22,26 @@ class MapViewController: UIViewController {
     var routePath: GMSMutablePath?
     var currentRoute: GMSPolyline?
     var currentRoutePath: GMSMutablePath?
+    var marker: GMSMarker?
     var isRoutingNow = false
     
-    let coordinatesSPB = CLLocationCoordinate2D(latitude: 59.9386300, longitude: 30.3141300)
-    let coordinatesMoscow = CLLocationCoordinate2D(latitude: 55.753215, longitude: 37.622504)
+    private let coordinatesSPB = CLLocationCoordinate2D(latitude: 59.9386300, longitude: 30.3141300)
+    private let coordinatesMoscow = CLLocationCoordinate2D(latitude: 55.753215, longitude: 37.622504)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureMap()
         configureLocationManager()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        configureController()
+    }
+    
+    private func configureController() {
+        navigationController?.navigationBar.topItem?.title = nil
+        navigationController?.navigationBar.prefersLargeTitles = false
     }
     
     private func configureMap() {
@@ -39,11 +50,6 @@ class MapViewController: UIViewController {
         mapView.camera = camera
         mapView.isMyLocationEnabled = true
         mapView.settings.myLocationButton = true
-    }
-    
-    private func addMarker(coordinate: CLLocationCoordinate2D) {
-        let marker = GMSMarker(position: coordinate)
-        marker.map = mapView
     }
     
     @IBAction func backButtonTapped(_ sender: Any) {
@@ -66,11 +72,16 @@ class MapViewController: UIViewController {
         let finishedPath = RealmRoute(decodedRoute: currentRoutePath?.encodedPath() ?? "")
         saveLastRoute(route: finishedPath)
         locationManager.stopUpdatingLocation()
+        deleteMarker()
     }
     
     @IBAction func showLastRoute(_ sender: Any) {
         if isRoutingNow {
-            presentAlertWithTitle(title: "You are routing now!", message: "If you want to see last route, we need to finish current route", options: "OK", "Cancel", completion: { [weak self] option in
+            let alertAssistant = AlertControllerAssistant(title: "You are routing now!",
+                                                          message: "If you want to see last route, we need to finish current route",
+                                                          options: ["OK", "Cancel"],
+                                                          caller: self)
+            alertAssistant.presentAlertWithTitle(completion: { [weak self] option in
                 guard let self = self else { return }
                 switch option {
                 case "OK":
@@ -100,12 +111,38 @@ class MapViewController: UIViewController {
                 }
                 
                 self.mapView.animate(toLocation: CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude))
-                //addMarker(coordinate: location.coordinate)
+                self.createMarker(coordinate: location.coordinate)
 
                 self.geocoder.reverseGeocodeLocation(location) { places, error in
                     print(places?.first as Any)
                 }
             }
+    }
+    
+    private func createMarker(coordinate: CLLocationCoordinate2D) {
+        deleteMarker()
+        if isRoutingNow {
+            makeMarker(coordinate: coordinate)
+        }
+    }
+    
+    private func makeMarker(coordinate: CLLocationCoordinate2D) {
+        let marker = GMSMarker(position: coordinate)
+        marker.map = mapView
+        marker.iconView = createMarkerView()
+        self.marker = marker
+    }
+    
+    private func deleteMarker() {
+        marker?.map = nil
+        self.marker = nil
+    }
+    
+    private func createMarkerView() -> UIView {
+        let frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        let view = UIView(frame: frame)
+        view.addSubview(ProfileBarButtonItem(frame: frame, size: 30))
+        return view
     }
     
     private func makeLastRoute() {
